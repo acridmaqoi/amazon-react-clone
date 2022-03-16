@@ -1,9 +1,8 @@
 const functions = require("firebase-functions");
 const express = require("express");
 const cors = require("cors");
-const stripe = require("stripe")(
-  "***REMOVED***"
-);
+require("dotenv").config();
+const stripe = require("stripe")(process.env.STRIPE_SECRET);
 
 // API
 
